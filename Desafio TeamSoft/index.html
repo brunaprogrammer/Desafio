@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">       
+    <title>FrontEnd</title>
+</head>
+<body>
+
+    <header>
+        <div class="wrap">
+
+            <div class="menu__celular">
+                <img src="imagens/keyboard_arrow_left_24px.png" alt="">
+            </div>
+
+            <div class="logo">
+            <img src="imagens/Deliverize Logo 1.png" alt="logo">
+            <img src="imagens/Deliverize Logo 2.png" alt="logo">         
+            </div>
+
+            <div class="entrega">
+                    <p>Entrega:</p>
+                    <img src="imagens/keyboard_arrow_down_24px.png" alt="seta">
+                    <p class="entrega__seletar">R. Antonio Braune, 222 </p>
+            </div>
+
+            <div class="buscar">
+                <input class="buscar__mysearch" name="searchitem" type="search" placeholder="Busque por estabelecimentos ou produtos">
+            </div>
+
+            <div class="entrar">
+                <img src="imagens/account_circle_24px.png" alt="imagem">
+                <p>Entrar</p>
+            </div>
+
+            <div class="carrinho">
+                <span class="carrinho__cont">1</span>
+                <img src="imagens/shopping_cart_24px.png" alt="carrinho">
+                <p>Carrinho</p>
+            </div>
+
+            <div class="popup">
+                <div class="popup__triangulo">
+                <img src="imagens/Polygon 1.png" alt="triangulo">
+                </div>
+        
+                <div class="popup__titulo">Adicionado com Sucesso</div>
+        
+                <p>Oferta cheddar Bacon</p>
+        
+                <div class="popup__lista">
+                    <ul>Ingredientes:
+                        <li>1 Carne 250gr</li>
+                        <li>2 Queijo Cheddar</li>
+                        <li>1 Bacon</li>
+                        <li>Molho Especial</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pedido">
+            <div class="pedido__burguer">
+                <img src="imagens/foto.png" alt="hamburguer">
+            </div>
+
+            <div class="pedido__oferta">
+                <p>Oferta Picanha Chedder Bacon</p>
+            </div>
+
+            <div class="pedido__descricao">
+                Hambúrguer de picanha, molho de picanha, cebola crispy, bacon, queijo cheddar, molho cheddar e pão mix de gergelim
+            </div>
+
+            <div class="pedido__preco">
+                <div class="pedido__preco__atual">
+                    <p>R$31,99</p>              
+                </div>
+
+                <div class="pedido__preco__antigo">
+                   <p>R$34,95</p> 
+                </div>
+            </div>            
+        </section>
+
+        <section class="customizacao">
+            <div class="frame disable-scrollbars">
+                <div class="frameinterno">
+                    
+                    <div class="customizacao__primeiro">
+                        <div class="customizacao__primeiro__titulo">
+                            <p>Adicionar Ingredientes</p>
+                        </div>
+                        <div class="customizacao__primeiro__descricao">
+                            <p>Até 8 ingredientes</p>
+                        </div>
+                    </div>
+
+                    <div class="customizacao__item">
+                        <div class="customizacao__item__titulo">
+                            <p>Queijo cheddar</p>
+                        </div>
+                        <div class="customizacao__item__quantidade">
+                            <div onclick="alteraQuantidadeExtra(this,false)" class="subtracao esconder"> <img src="imagens/vetor.png" alt=""> </div>
+                            <div class="customizacao__item__quantidade--entrada esconder"> <span class="entrada">0</span></div>
+                            <div onclick="alteraQuantidadeExtra(this,true)" class="soma item__vazio"> <img src="imagens/Vector.png" alt=""> </div>
+                        </div>
+                        <p class="customizacao__item__preco">+ R$4,99</p>
+                        <hr>
+                    </div>
+
+                    <div class="customizacao__item">
+                        <div class="customizacao__item__titulo">
+                            <p>Cebola crispy</p>
+                        </div>
+                        <div class="customizacao__item__quantidade">
+                            <div onclick="alteraQuantidadeExtra(this,false)" class="subtracao esconder"> <img src="imagens/vetor.png" alt=""> </div>
+                            <div class="customizacao__item__quantidade--entrada esconder"> <span class="entrada">0</span></div>
+                            <div onclick="alteraQuantidadeExtra(this,true)" class="soma item__vazio"> <img src="imagens/Vector.png" alt=""> </div>
+                        </div>
+                            <p class="customizacao__item__preco">+ R$1,50</p>
+                            <hr>
+                    </div>
+
+                    <div class="customizacao__item">
+                        <div class="customizacao__item__titulo">
+                            <p>Molho cheddar</p>
+                        </div>
+                        <div class="customizacao__item__quantidade">
+                            <div onclick="alteraQuantidadeExtra(this,false)" class="subtracao esconder"> <img src="imagens/vetor.png" alt=""> </div>
+                            <div class="customizacao__item__quantidade--entrada esconder"> <span class="entrada">0</span></div>
+                            <div onclick="alteraQuantidadeExtra(this,true)" class="soma item__vazio"> <img src="imagens/Vector.png" alt=""> </div>
+                        </div>
+                        <p class="customizacao__item__preco">+ R$3,50</p>
+                        <hr>
+                    </div>
+
+                    <div class="customizacao__item">
+                        <div class="customizacao__item__titulo">
+                            <p>Molho de picanha</p>
+                        </div>
+                        <div class="customizacao__item__quantidade">
+                            <div onclick="alteraQuantidadeExtra(this,false)" class="subtracao esconder"> <img src="imagens/vetor.png" alt=""> </div>
+                            <div class="customizacao__item__quantidade--entrada esconder"> <span class="entrada">0</span></div>
+                            <div onclick="alteraQuantidadeExtra(this,true)" class="soma item__vazio"> <img src="imagens/Vector.png" alt=""> </div>
+                        </div>
+                        <p class="customizacao__item__preco">+ R$3,50</p>
+                        <hr class="customizacao__item--hide">
+                    </div>
+                    <div class="customizacao__talher">
+                        <div class="customizacao__talher_talheres">
+                            <p>Precisa de Talher?</p>
+                        </div>
+                        <div class="customizacao__talher__resposta">
+                            <label for="yes">Sim<input type="radio" name="talher"></label>
+                            <label for="no">Não<input type="radio" name="talher"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="customizacao__final">
+                    <div class="customizacao__item__quantidade--big">
+                        <div onclick="alteraQuantidadeItem(this,false)" class="subtracao"> <img src="imagens/vetor.png" alt=""> </div>
+                        <div class="customizacao__item__quantidade--entrada"> <span class="entrada">1</span></div>
+                        <div onclick="alteraQuantidadeItem(this,true)" class="soma"> <img src="imagens/Vector.png" alt=""> </div>
+                     </div>
+                     <div class="customizacao__final__adicionar">
+                         <button onclick="adicionar()" >Adicionar</button>
+                     </div>
+                </div>
+        </section>
+    </main>
+
+   <script src="script.js"></script> 
+
+</body>
+</html>
